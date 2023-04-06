@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Form</title>
+</h:head>
+
+<h:body>
+
+	<h:form>
+	
+		First name:
+		<h:inputText id="firstName" value="${student.firstName}"></h:inputText>
+		<br></br>
+		<br></br>
+		
+		Last name:
+		<h:inputText id="lastName" value="${student.lastName}"></h:inputText>
+		<br></br>
+		<br></br>
+
+		<h:selectOneMenu value="${student.city}">
+			<f:selectItem itemValue="brazil" itemLabel="Brazil"></f:selectItem>
+			<f:selectItem itemValue="UK" itemLabel="UK"></f:selectItem>
+			<f:selectItem itemValue="india" itemLabel="India"></f:selectItem>
+			<f:selectItem itemValue="germany" itemLabel="Germany"></f:selectItem>
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+
+		<!-- pre-populate the select with option from Student class -->
+		<h:selectOneMenu value="${student.city}">
+			<f:selectItems value="${student.listCountryOptions}"></f:selectItems>
+		</h:selectOneMenu>
+		<br></br>
+		<br></br>
+		
+		Favorite programming language
+		<h:selectOneRadio value="${student.favoriteLanguage}">
+			<f:selectItem itemValue="JAVA" itemLabel="JAVA"></f:selectItem>
+			<f:selectItem itemValue="C#" itemLabel="C#"></f:selectItem>
+		</h:selectOneRadio>
+		
+		
+		Favorite programming language
+		<h:selectManyCheckbox value="${student.listFavoriteLanguages}">
+			<f:selectItem itemValue="JAVA" itemLabel="JAVA"></f:selectItem>
+			<f:selectItem itemValue="C#" itemLabel="C#"></f:selectItem>
+			<f:selectItem itemValue="PHP" itemLabel="PHP"></f:selectItem>
+		</h:selectManyCheckbox>
+
+		<h:commandButton value="Submit" action="student_response"></h:commandButton>
+
+	</h:form>
+
+</h:body>
+
+</html>
+

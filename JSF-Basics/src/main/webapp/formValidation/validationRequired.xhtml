@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Form</title>
+</h:head>
+
+<h:body>
+
+	<h:form>
+	
+		First name:
+		<h:inputText id="firstNameVal" value="${studentVal.firstName}"
+			label="First name required" required="true"
+			requiredMessage="First name mandatory!"></h:inputText>
+		<h:message for="firstNameVal" style="color: blue"></h:message>
+		<br></br>
+		<br></br>
+		
+		Last name:
+		<h:inputText id="lastNameVal" value="${studentVal.lastName}"
+			label="Last name required" required="true"
+			requiredMessage="Last name mandatory!"></h:inputText>
+		<h:message for="lastNameVal" style="color: blue"></h:message>
+		<br></br>
+		<br></br>
+		
+		Email:
+		<h:inputText id="emailVal" value="${studentVal.email}"
+			label="Email required" required="true"></h:inputText>
+		<h:message for="emailVal" style="color: blue"></h:message>
+		<br></br>
+		<br></br>
+
+		<h:commandButton value="Submit" action="validation_response"></h:commandButton>
+		<br></br>
+		<h:messages style="color: red"></h:messages>
+	</h:form>
+
+</h:body>
+
+</html>
+

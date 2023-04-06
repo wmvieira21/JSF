@@ -1,0 +1,17 @@
+
+.demo-table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: gray;
+}
+
+.demo-table-header {
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
+
+.demo-table-row {
+	text-align: center;
+	border-top: 1px solid white;
+}

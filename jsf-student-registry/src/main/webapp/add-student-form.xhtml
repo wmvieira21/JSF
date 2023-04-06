@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<f:metadata>
+	<f:event listener="#{studentController.loadStudents()}"
+		type="preRenderView"></f:event>
+</f:metadata>
+
+<h:body>
+	<h3>Add Student</h3>
+	<h:form>
+		<h:outputLabel>First Name</h:outputLabel>
+		<h:inputText value="#{student.firstName}" id="firstName"
+			required="true"></h:inputText>
+		<br></br>
+		<h:outputLabel>Last Name</h:outputLabel>
+		<h:inputText value="#{student.lastName}" id="lastName" required="true"></h:inputText>
+		<br></br>
+		<h:outputLabel>Email</h:outputLabel>
+		<h:inputText value="#{student.email}" id="email"
+			requiredMessage="Email is required" required="true"></h:inputText>
+		<br></br>
+		<h:commandButton value="Save"
+			action="#{studentController.addStudent(student)}"></h:commandButton>
+		<h:messages></h:messages>
+	</h:form>
+
+	<h:outputLink value="teste-db.xhtml">Go back</h:outputLink>
+</h:body>
+
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Form</title>
+</h:head>
+
+<h:body>
+
+	The student is confirmed: #{student.firstName} #{student.lastName}
+	<br></br><br></br>
+	Country #{student.city}
+	<br></br><br></br>
+	Student's favorite language #{student.favoriteLanguage}
+	<br></br><br></br>
+	
+	Student's favorite language checkbox 
+	<a:repeat var="list" value="#{student.listFavoriteLanguages}">
+		<li>${list}</li>
+	</a:repeat>
+</h:body>
+
+</html>
+
